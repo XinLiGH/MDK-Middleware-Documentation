@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Main Page</title>
-<title>MDK Middleware: Main Page</title>
+<title>主页</title>
+<title>MDK 中间件：主页</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="drv.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -33,10 +33,10 @@
  <tr style="height: 46px;">
   <td id="projectlogo"><img alt="Logo" src="keilarm.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">MDK Middleware
-   &#160;<span id="projectnumber">Version 7.6.0</span>
+   <div id="projectname">MDK 中间件
+   &#160;<span id="projectnumber">版本 7.6.0</span>
    </div>
-   <div id="projectbrief">Software Components for MDK-Professional and MDK-Plus</div>
+   <div id="projectbrief">用于 MDK-Professional 和 MDK-Plus 的软件组件</div>
   </td>
  </tr>
  </tbody>
@@ -58,8 +58,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li class="current"><a href="index.html"><span>主&#160;页</span></a></li>
+      <li><a href="pages.html"><span>相关&#160;页面</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('index.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>页面</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,66 +109,66 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">MDK Middleware Documentation</div>  </div>
+<div class="title">MDK 中间件文档</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>MDK is a development environment for ARM Cortex-M series microcontrollers which contains everything for creating and testing applications in assembly, C or C++. MDK is split into MDK Core and Software Packs making new device support and middleware updates independent from the tools.</p>
+<div class="textblock"><p>MDK 是 ARM Cortex-M 系列微控制器的开发环境，包含用于在 C 或 C++ 程序中创建和测试应用程序的所有内容。MDK 分为 MDK 核心和软件包，使得独立于工具的新设备支持和中间件更新成为可能。</p>
 <div class="image">
 <img src="mw_overview520.png" alt="mw_overview520.png"/>
 <div class="caption">
-MDK Software Packs</div></div>
-<p> The <script>link_ext('MDK-Core');</script> contains IDE, ARM compiler, Pack Installer, and a debugger. Software Packs install device support and CMSIS components.</p>
-<p>The <b>MDK</b> <b>Middleware</b> Software Pack contains components for IPv4 and IPv6 networking, USB Host and Device communication, file system for data storage, and a graphical user interface. The real-time operating system CMSIS-RTOS RTX is used by all middleware components for task scheduling.</p>
-<p>This documentation describes:</p>
+MDK 软件包</div></div>
+<p><script>link_ext('MDK-Core');</script> 包含 IDE，ARM 编译器，包安装程序和调试器。软件包安装设备支持和 CMSIS 组件。</p>
+<p><b>MDK</b> <b>中间件</b>软件包包含用于 IPv4 和 IPv6 网络的组件，USB 主机和设备通信，用于数据存储的文件系统以及图形用户界面。实时操作系统 CMSIS-RTOS RTX 被所有中间件组件用于任务调度。</p>
+<p>本文档介绍：</p>
 <ul>
-<li> <script>link_loc('MW-FileSystem');</script>: create, save, read, and modify files in storage devices such as RAM, Flash, SD/SDHC/MMC memory cards, or USB memory devices.</li>
-<li> <script>link_loc('MW-Graphic');</script>: flexible graphical user interface (GUI) for LCD displays.</li>
-<li> <script>link_loc('MW-Network');</script>: services, protocol sockets, and physical communication interfaces for creating networking applications.</li>
-<li> <script>link_loc('MW-USB');</script>: create USB Device and USB Host applications with standard USB device classes.</li>
-<li> <script>link_loc('MW-Board');</script>: describes the board support interfaces that are used by the various example programs.</li>
+<li> <script>link_loc('MW-FileSystem');</script>: 创建，保存，读取和修改存储设备（如 RAM，闪存，SD/SDHC/MMC 存储卡或 USB 存储设备）中的文件。</li>
+<li> <script>link_loc('MW-Graphic');</script>: 灵活的用于 LCD 显示器的图形用户界面（GUI）。</li>
+<li> <script>link_loc('MW-Network');</script>: 服务，协议套接字和用于创建网络应用程序的物理通信接口。</li>
+<li> <script>link_loc('MW-USB');</script>: 使用标准 USB 设备类创建 USB 设备和 USB 主机应用程序。</li>
+<li> <script>link_loc('MW-Board');</script>: 描述各种示例程序使用的电路板支持接口。</li>
 </ul>
-<p>Software components outside the scope of this documentation are:</p>
+<p>本文档范围之外的软件组件是：</p>
 <ul>
-<li> <script>link_ext('CMSIS-RTX5');</script> or <script>link_ext('CMSIS-RTX4');</script> the real-time operating system used by all middleware components. RTX is part of the <script>link_ext('ARM-SW-Pack');</script>.</li>
-<li> <script>link_ext('mbedTLS');</script>: a software component providing encryption and secure communication for network components. mbed TLS is available as a separate <script>link_ext('SW-Pack');</script>.</li>
+<li> <script>link_ext('CMSIS-RTX5');</script> 或 <script>link_ext('CMSIS-RTX4');</script> 是所有中间件组件使用的实时操作系统。RTX 是 <script>link_ext('ARM-SW-Pack');</script> 其中的一部分。</li>
+<li> <script>link_ext('mbedTLS');</script>: 为网络组件提供加密和安全通信的软件组件。mbed TLS 可作为单独的 <script>link_ext('SW-Pack');</script> 提供。</li>
 </ul>
-<p>Each component is configurable for a wide range of applications and uses the <a class="el" href="_driver_interface.html">driver interface</a> as described by the <script>link_ext('CMSIS-Driver');</script> standard.</p>
-<h2>MDK Editions </h2>
-<p>MDK Middleware is available to all users of <script>link_ext('MDK-Pro-Editions');</script> and <script>link_ext('MDK-Plus-Editions');</script>. The following table shows the differences in middleware component availability:</p>
+<p>每个组件可用于广泛的应用程序，并使用 <script>link_ext('CMSIS-Driver');</script> 标准所描述的<a class="el" href="_driver_interface.html">驱动程序接口</a>。</p>
+<h2>MDK 版本</h2>
+<p>MDK 中间件可供所有 <script>link_ext('MDK-Pro-Editions');</script> 和 <script>link_ext('MDK-Plus-Editions');</script>用户使用。下表显示了中间件组件可用性的差异：</p>
 <table class="doxtable">
 <tr>
-<th>Middleware Component </th><th align="center">MDK-Professional </th><th align="center">MDK-Plus  </th></tr>
+<th>中间件组件</th><th align="center">MDK-Professional</th><th align="center">MDK-Plus</th></tr>
 <tr>
-<td>File System </td><td align="center">Available </td><td align="center">Available </td></tr>
+<td>File System </td><td align="center">可用</td><td align="center">可用</td></tr>
 <tr>
-<td>Graphic </td><td align="center">Available </td><td align="center">Available </td></tr>
+<td>Graphic </td><td align="center">可用</td><td align="center">可用</td></tr>
 <tr>
-<td>Network (IPv4) </td><td align="center">Available </td><td align="center">Available </td></tr>
+<td>Network (IPv4) </td><td align="center">可用</td><td align="center">可用</td></tr>
 <tr>
-<td>Network (IPv4/IPv6) </td><td align="center">Available </td><td align="center"></td></tr>
+<td>Network (IPv4/IPv6) </td><td align="center">可用</td><td align="center"></td></tr>
 <tr>
-<td>Network (SSL/TLS) </td><td align="center">Available </td><td align="center"></td></tr>
+<td>Network (SSL/TLS) </td><td align="center">可用</td><td align="center"></td></tr>
 <tr>
-<td>USB Device </td><td align="center">Available </td><td align="center">Available </td></tr>
+<td>USB Device </td><td align="center">可用</td><td align="center">可用</td></tr>
 <tr>
-<td>USB Host </td><td align="center">Available </td><td align="center"></td></tr>
+<td>USB Host </td><td align="center">可用</td><td align="center"></td></tr>
 </table>
-<p><b>Middleware</b> <b>Component</b> <b>Selection</b> </p>
-<p>To add the middleware components to your project, you need to select the proper MDK edition in the <b>Manage Run-Time Environment</b> window. Using <b>MDK-Plus</b>, select:</p>
+<p><b>中间件组件选择</b></p>
+<p>要将中间件组件添加到项目中，您需要在 <b>Manage Run-Time Environment</b> 窗口中选择适当的 MDK 版本。使用 <b>MDK-Plus</b>, 选择：</p>
 <div class="image">
 <img src="mdk_plus_selected.png" alt="mdk_plus_selected.png"/>
 </div>
-<p>Using <b>MDK-Professional</b>, select:</p>
+<p>使用 <b>MDK-Professional</b>, 选择：</p>
 <div class="image">
 <img src="mdk_pro_selected.png" alt="mdk_pro_selected.png"/>
 </div>
-<dl class="section note"><dt>Note</dt><dd>If you have an MDK-Plus license installed, but select <b>MDK-Pro</b>, you will get an error at compile time. </dd></dl>
+<dl class="section note"><dt>注意</dt><dd>如果您安装了 MDK-Plus 许可证，但选择了 <b>MDK-Pro</b>，您将在编译时发生错误。</dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 21 2018 20:26:52 for MDK Middleware by ARM Ltd. All rights reserved.
+    <li class="footer">由 ARM 有限公司为 MDK 中间件于 2018 年 2 月 21 日 星期三 20:26:52 生成。保留所有权利。
 	<!--
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 

@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Stack, Heap and RTOS Configuration</title>
-<title>MDK Middleware: Stack, Heap and RTOS Configuration</title>
+<title>栈，堆和 RTOS 配置</title>
+<title>MDK 中间件：栈，堆和 RTOS 配置</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="drv.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -33,10 +33,10 @@
  <tr style="height: 46px;">
   <td id="projectlogo"><img alt="Logo" src="keilarm.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">MDK Middleware
-   &#160;<span id="projectnumber">Version 7.6.0</span>
+   <div id="projectname">MDK 中间件
+   &#160;<span id="projectnumber">版本 7.6.0</span>
    </div>
-   <div id="projectbrief">Software Components for MDK-Professional and MDK-Plus</div>
+   <div id="projectbrief">用于 MDK-Professional 和 MDK-Plus 的软件组件</div>
   </td>
  </tr>
  </tbody>
@@ -58,8 +58,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="index.html"><span>主&#160;页</span></a></li>
+      <li class="current"><a href="pages.html"><span>相关&#160;页面</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('mw_using_stack_and_heap.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>页面</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,25 +109,25 @@ $(document).ready(function(){initNavTree('mw_using_stack_and_heap.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stack, Heap and RTOS Configuration </div>  </div>
+<div class="title">栈，堆和 RTOS 配置</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Every software component has resource requirements for stack, heap, and memory. Configuration files such as <a class="el" href="mw_using_stack_and_heap.html#mw_using_startup">startup_device.s</a> and <a class="el" href="mw_using_stack_and_heap.html#mw_using_rtx_conf">RTX_Conf_CM.h</a> need to be adapted to these requirements. Every middleware component has a section that explains the resource requirements and gives examples on how to calculate the resulting values for adaption of the configuration files.</p>
+<div class="textblock"><p>每个软件组件都有栈，堆和内存的资源需求。像 <a class="el" href="mw_using_stack_and_heap.html#mw_using_startup">startup_device.s</a> 和 <a class="el" href="mw_using_stack_and_heap.html#mw_using_rtx_conf">RTX_Conf_CM.h</a> 这样的配置文件需要适应这些要求。每个中间件组件都有一个解释资源需求的部分，并举例说明如何计算用于修改配置文件的结果值。</p>
 <h1><a class="anchor" id="mw_using_startup"></a>
-Configuring Stack using startup_device.s</h1>
-<p>The <b>startup_device.s</b> file is provided by the device vendor in a <a href="http://www.keil.com/cmsis/pack" class="el" target="_blank">Device Family Pack</a>. The file will be copied into a µVision project automatically after selecting <b>Device:Startup</b> in the <b>Manage Run-Time Environment</b> window. It is used to configure the size of the stack that is used by exceptions and <b>interrupt service routines (ISR)</b> for the current project. The stack size requirements depend on the maximum nesting of exception and ISR execution and therefore on the priority settings of the various interrupt and exception sources. Also, the heap which is used by memory allocation functions is configured in this file.</p>
-<p>Most of the middleware components only require additional <b>stack</b> size, whereas the <b>File System</b> component also requires additional <b>heap</b> size. The memory requirements are stated in the <a class="el" href="mw_using_mw.html">Resource Requirements</a> section of each Middleware component.</p>
+使用 startup_device.s 配置堆栈</h1>
+<p><b>startup_device.s</b> 文件由<a href="http://www.keil.com/cmsis/pack" class="el" target="_blank">设备系列包</a>中的设备供应商提供。在 <b>Manage Run-Time Environment</b> 窗口中选择 <b>Device:Startup</b> 后，该文件将被自动复制到 μVision 项目中。它用于配置当前项目的异常和<b>中断服务程序（ISR）</b>使用的堆栈大小。堆栈大小要求取决于异常和 ISR 执行的最大嵌套，因此取决于各种中断和异常源的优先级设置。另外，在这个文件中配置内存分配函数使用的堆。</p>
+<p>大多数中间件组件只需要额外的<b>栈</b>大小，而<b>文件系统</b>组件还需要额外的<b>堆</b>大小。内存需求在每个中间件组件的<a class="el" href="mw_using_mw.html">资源需求</a>部分中说明。</p>
 <h1><a class="anchor" id="mw_using_rtx_conf"></a>
-Configuring CMSIS-RTOS using RTX_Conf_CM.c</h1>
-<p>The stack size in the <b>startup_device.s</b> file configures only the stack space that is used by exceptions and <b>interrupt service routines (ISR)</b>. When using a CMSIS-RTOS, additional requirements for the RTOS are configured in the <b>RTX_Conf_CM.c</b> file. Depending on the Middleware component, for example the number of user threads, thread stack sizes or even user timers need to be configured.</p>
-<p>The additional CMSIS-RTOS related requirements are also stated in the <a class="el" href="mw_using_mw.html">Resource Requirements</a> section of each Middleware component. </p>
+使用 RTX_Conf_CM.c 配置 CMSIS-RTOS</h1>
+<p><b>startup_device.s</b> 文件中的堆栈大小仅配置异常和<b>中断服务程序（ISR）</b>使用的堆栈空间。当使用 CMSIS-RTOS 时，需要在 <b>RTX_Conf_CM.c</b> 文件中配置 RTOS 的附加要求。根据中间件组件，例如需要配置用户线程数量，线程堆栈大小甚至用户计时器。</p>
+<p>每个中间件组件的<a class="el" href="mw_using_mw.html">资源需求</a>部分还介绍了额外的 CMSIS-RTOS 相关需求。</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="mw_using_mw.html">Middleware Documentation</a></li>
-    <li class="footer">Generated on Wed Feb 21 2018 20:26:52 for MDK Middleware by ARM Ltd. All rights reserved.
+    <li class="navelem"><a class="el" href="mw_using_mw.html">中间件文档</a></li>
+    <li class="footer">由 ARM 有限公司为 MDK 中间件于 2018 年 2 月 21 日 星期三 20:26:52 生成。保留所有权利。
 	<!--
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 

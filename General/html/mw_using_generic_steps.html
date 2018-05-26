@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Generic Steps</title>
-<title>MDK Middleware: Generic Steps</title>
+<title>通用步骤</title>
+<title>MDK 中间件：通用步骤</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="drv.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -33,10 +33,10 @@
  <tr style="height: 46px;">
   <td id="projectlogo"><img alt="Logo" src="keilarm.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">MDK Middleware
-   &#160;<span id="projectnumber">Version 7.6.0</span>
+   <div id="projectname">MDK 中间件
+   &#160;<span id="projectnumber">版本 7.6.0</span>
    </div>
-   <div id="projectbrief">Software Components for MDK-Professional and MDK-Plus</div>
+   <div id="projectbrief">用于 MDK-Professional 和 MDK-Plus 的软件组件</div>
   </td>
  </tr>
  </tbody>
@@ -58,8 +58,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="index.html"><span>主&#160;页</span></a></li>
+      <li class="current"><a href="pages.html"><span>相关&#160;页面</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('mw_using_generic_steps.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>页面</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,52 +109,52 @@ $(document).ready(function(){initNavTree('mw_using_generic_steps.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Generic Steps </div>  </div>
+<div class="title">通用步骤</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>There are a few generic steps that have to be done to include a middleware component in a µVision project:</p>
+<div class="textblock"><p>在 μVision 项目中包含一些中间件组件需要执行几个通用步骤：</p>
 <div class="image">
 <img src="generic_steps.png" alt="generic_steps.png"/>
 <div class="caption">
-Generic steps for adding Middleware to a µVision project</div></div>
+将中间件添加到 μVision 项目的一般步骤</div></div>
 <h1><a class="anchor" id="add_sw_comp"></a>
-Add Software Components</h1>
-<p>Using the <b>Manage Run-Time Environment</b> window, you need to select the required software components for your application. The <b>Validation Output</b> helps you to identify dependencies to other software components and resolves them automatically, whenever possible.</p>
+添加软件组件</h1>
+<p>使用 <b>Manage Run-Time Environment</b> 窗口，您需要为应用程序选择所需的软件组件。<b>Validation Output</b> 可帮助您识别其他软件组件的依赖关系，并尽可能自动解决它们。</p>
 <div class="image">
 <img src="manage_rte_window.png" alt="manage_rte_window.png"/>
 <div class="caption">
-Manage Run-Time Environment Window with Validation Errors</div></div>
+使用验证错误管理运行时环境窗口</div></div>
 <h1><a class="anchor" id="conf_mw"></a>
-Configure Middleware</h1>
-<p>Every middleware component has specific configuration files that need to be adapted to the needs of the application. Depending on the component, more than one file might need to be adapted. For example, the <b>File System</b> component needs to be configured for the amount of files that can be opened simultaneously and the initial current drive in the <b>FS_Config.c</b> file. In addition, you need to set drive specific settings in the <b>FS_Config_<em>Drive</em>_0.h</b> file, such as page and block sizes for Flash memories, general disk sizes for a RAM drive, and the hardware driver number for connecting the drive to the appropriate hardware peripheral driver.</p>
+配置中间件</h1>
+<p>每个中间件组件都有特定的配置文件，需要根据应用程序的需要进行调整。根据组件的不同，可能需要修改多个文件。例如，<b>File System</b> 组件需要配置可以同时打开的文件数量和 <b>FS_Config.c</b> 文件中的初始当前驱动器。此外，您需要在 <b>FS_Config_<em>Drive</em>_0.h</b> 文件中设置驱动器特定设置，例如 Flash 存储器的页面和块大小，RAM 驱动器的常规磁盘大小以及用于将驱动器连接到相应的硬件外围驱动器的硬件驱动器编号。</p>
 <div class="image">
 <img src="file_system_conf.png" alt="file_system_conf.png"/>
 <div class="caption">
-File System Configuration Files FS_Config_MC_0.h and FS_Config.c</div></div>
+文件系统配置文件 FS_Config_MC_0.h 和 FS_Config.c </div></div>
 <h1><a class="anchor" id="conf_drivers"></a>
-Configure Drivers</h1>
-<p>Usually, the device driver related to a software component and the associated controller in the microcontroller need to be configured as well. For the Middleware, this is usually done in the file <b>RTE_Device.h</b>. Here, you can enable or disable the different hardware controllers and you can specify which device pins are used for the different features of a specific device peripheral.</p>
+配置驱动程序</h1>
+<p>通常，还需要配置与微控制器中的软件组件和相关控制器相关的设备驱动程序。对于中间件，这通常在文件 <b>RTE_Device.h</b> 中完成。在这里，您可以启用或禁用不同的硬件控制器，并且可以指定哪些器件引脚用于特定器件外设的不同功能。</p>
 <div class="image">
 <img src="rte_device_h.png" alt="rte_device_h.png"/>
 <div class="caption">
-RTE_Device.h File for Driver Configuration</div></div>
+用于驱动程序配置的 RTE_Device.h 文件</div></div>
 <h1><a class="anchor" id="conf_sys_req"></a>
-Configure System Resources</h1>
-<p>Every software component has resource requirements for stack, heap, and memory. Configuration files such as <b>startup_<em>device</em>.s</b> and <b>RTX_Conf_CM.h</b> need to be adapted to these requirements. Every middleware component has a section that explains the resource requirements and gives examples on how to calculate the resulting values for adaption of the configuration files. The section <a class="el" href="mw_using_stack_and_heap.html">Stack, Heap and RTOS Configuration</a> gives you more information about the background and the configuration files that need to be touched.</p>
+配置系统资源</h1>
+<p>每个软件组件都有栈，堆和内存的资源需求。像 <b>startup_<em>device</em>.s</b> 和 <b>RTX_Conf_CM.h</b> 这样的配置文件需要适应这些要求。每个中间件组件都有一个解释资源需求的部分，并举例说明如何计算用于修改配置文件的结果值。<a class="el" href="mw_using_stack_and_heap.html">栈，堆和 RTOS 配置</a>部分为您提供了关于需要触及的背景和配置文件的更多信息。</p>
 <div class="image">
 <img src="rtx_startup.png" alt="rtx_startup.png"/>
 <div class="caption">
-RTX_Conf_CM.c and startup_device.s for System Resource Configuration</div></div>
+用于系统资源配置的 RTX_Conf_CM.c 和 startup_device.s</div></div>
 <h1><a class="anchor" id="implement_feat"></a>
-Implement Application Features</h1>
-<p>Finally, the actual application needs to be implemented. For better understanding of the middleware components, take a look at the existing <a class="el" href="mw_using_mw.html#doc_mw">Example projects</a>. They can be used as a starting point for application development. The <a class="el" href="mw_using_mw.html#doc_mw">Reference</a> sections of each middleware component help to understand the API functions for the related components. Various <script>link_ext('uv4_ca_sourcefiles');</script> are available to help you implementing your application. </p>
+实现应用程序特征</h1>
+<p>最后，需要实现实际应用。为了更好地理解中间件组件，请查看现有 <a class="el" href="mw_using_mw.html#doc_mw">Example projects</a>。它们可以作为应用程序开发的起点。每个中间件组件的<a class="el" href="mw_using_mw.html#doc_mw">参考</a>部分有助于理解相关组件的 API 函数。各种 <script>link_ext('uv4_ca_sourcefiles');</script> 可帮助您实现您的应用程序。</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="mw_using_mw.html">Middleware Documentation</a></li>
-    <li class="footer">Generated on Wed Feb 21 2018 20:26:52 for MDK Middleware by ARM Ltd. All rights reserved.
+    <li class="navelem"><a class="el" href="mw_using_mw.html">中间件文档</a></li>
+    <li class="footer">由 ARM 有限公司为 MDK 中间件于 2018 年 2 月 21 日 星期三 20:26:52 生成。保留所有权利。
 	<!--
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
