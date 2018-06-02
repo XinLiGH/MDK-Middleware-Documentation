@@ -115,12 +115,12 @@ $(document).ready(function(){initNavTree('mw_using_stack_and_heap.html','');});
 <div class="textblock"><p>每个软件组件都有栈，堆和内存的资源需求。像 <a class="el" href="mw_using_stack_and_heap.html#mw_using_startup">startup_device.s</a> 和 <a class="el" href="mw_using_stack_and_heap.html#mw_using_rtx_conf">RTX_Conf_CM.h</a> 这样的配置文件需要适应这些要求。每个中间件组件都有一个解释资源需求的部分，并举例说明如何计算用于修改配置文件的结果值。</p>
 <h1><a class="anchor" id="mw_using_startup"></a>
 使用 startup_device.s 配置堆栈</h1>
-<p><b>startup_device.s</b> 文件由<a href="http://www.keil.com/cmsis/pack" class="el" target="_blank">设备系列包</a>中的设备供应商提供。在 <b>Manage Run-Time Environment</b> 窗口中选择 <b>Device:Startup</b> 后，该文件将被自动复制到 μVision 项目中。它用于配置当前项目的异常和<b>中断服务程序（ISR）</b>使用的堆栈大小。堆栈大小要求取决于异常和 ISR 执行的最大嵌套，因此取决于各种中断和异常源的优先级设置。另外，在这个文件中配置内存分配函数使用的堆。</p>
-<p>大多数中间件组件只需要额外的<b>栈</b>大小，而<b>文件系统</b>组件还需要额外的<b>堆</b>大小。内存需求在每个中间件组件的<a class="el" href="mw_using_mw.html">资源需求</a>部分中说明。</p>
+<p><b>startup_device.s</b> 文件由 <a href="http://www.keil.com/cmsis/pack" class="el" target="_blank">设备系列包</a> 中的设备供应商提供。在 <b>Manage Run-Time Environment</b> 窗口中选择 <b>Device:Startup</b> 后，该文件将被自动复制到 μVision 项目中。它用于配置当前项目的异常和 <b>中断服务程序（ISR）</b>使用的堆栈大小。堆栈大小要求取决于异常和 ISR 执行的最大嵌套，因此取决于各种中断和异常源的优先级设置。另外，在这个文件中配置内存分配函数使用的堆。</p>
+<p>大多数中间件组件只需要额外的 <b>栈</b> 大小，而 <b>文件系统</b> 组件还需要额外的 <b>堆</b> 大小。内存需求在每个中间件组件的 <a class="el" href="mw_using_mw.html">资源需求</a> 部分中说明。</p>
 <h1><a class="anchor" id="mw_using_rtx_conf"></a>
 使用 RTX_Conf_CM.c 配置 CMSIS-RTOS</h1>
 <p><b>startup_device.s</b> 文件中的堆栈大小仅配置异常和<b>中断服务程序（ISR）</b>使用的堆栈空间。当使用 CMSIS-RTOS 时，需要在 <b>RTX_Conf_CM.c</b> 文件中配置 RTOS 的附加要求。根据中间件组件，例如需要配置用户线程数量，线程堆栈大小甚至用户计时器。</p>
-<p>每个中间件组件的<a class="el" href="mw_using_mw.html">资源需求</a>部分还介绍了额外的 CMSIS-RTOS 相关需求。</p>
+<p>每个中间件组件的 <a class="el" href="mw_using_mw.html">资源需求</a> 部分还介绍了额外的 CMSIS-RTOS 相关需求。</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

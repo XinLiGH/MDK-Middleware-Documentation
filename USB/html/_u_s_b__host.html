@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>USB Host (MDK-Professional only)</title>
-<title>USB Component: USB Host (MDK-Professional only)</title>
+<title>USB 主机（仅适用于 MDK 专业版）</title>
+<title>USB 组件：USB 主机（仅适用于 MDK 专业版）</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="drv.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
@@ -33,10 +33,10 @@
  <tr style="height: 46px;">
   <td id="projectlogo"><img alt="Logo" src="keilarm.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">USB Component
-   &#160;<span id="projectnumber">Version 6.12.4</span>
+   <div id="projectname">USB 组件
+   &#160;<span id="projectnumber">版本 6.12.4</span>
    </div>
-   <div id="projectbrief">MDK Middleware for USB Device and Host Communication</div>
+   <div id="projectbrief">用于 USB 设备和主机通信的 MDK 中间件</div>
   </td>
  </tr>
  </tbody>
@@ -58,9 +58,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="pages.html"><span>Usage&#160;and&#160;Description</span></a></li>
-      <li><a href="modules.html"><span>Reference</span></a></li>
+      <li><a href="index.html"><span>主&#160;页</span></a></li>
+      <li class="current"><a href="pages.html"><span>用法&#160;和&#160;描述</span></a></li>
+      <li><a href="modules.html"><span>参考</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('_u_s_b__host.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>数据结构</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>枚举</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>组</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页面</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,146 +110,146 @@ $(document).ready(function(){initNavTree('_u_s_b__host.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">USB Host (MDK-Professional only) </div>  </div>
+<div class="title">USB 主机（仅适用于 MDK 专业版）</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Create_a_USB_Host_Application">Create an USB Host Application</a><ul><li class="level2"><a href="#RTE_Software_Component_Selection_USBH">RTE Component Selection</a></li>
-<li class="level2"><a href="#USB_Driver_Configuration_USBH">USB Driver and Controller</a></li>
-<li class="level2"><a href="#USB_Host_Configuration_USBH">USB Host Configuration</a></li>
-<li class="level2"><a href="#usbh_system_resources">System Resource Configuration</a></li>
-<li class="level2"><a href="#USB_Device_Class_Configuration_USBH">Configuration of Attachable USB Devices</a></li>
-<li class="level2"><a href="#USBH_User_Code_Implementation">User Code Implementation</a></li>
-<li class="level2"><a href="#usbh_debugging">Debugging</a></li>
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#Create_a_USB_Host_Application">创建一个 USB 主机应用程序</a><ul><li class="level2"><a href="#RTE_Software_Component_Selection_USBH">RTE 组件选择</a></li>
+<li class="level2"><a href="#USB_Driver_Configuration_USBH">USB 驱动程序和控制器</a></li>
+<li class="level2"><a href="#USB_Host_Configuration_USBH">USB 主机配置</a></li>
+<li class="level2"><a href="#usbh_system_resources">系统资源配置</a></li>
+<li class="level2"><a href="#USB_Device_Class_Configuration_USBH">可连接的 USB 设备的配置</a></li>
+<li class="level2"><a href="#USBH_User_Code_Implementation">用户代码实现</a></li>
+<li class="level2"><a href="#usbh_debugging">调试</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><p>This chapter describes the software structure of the USB Host Component and explains its use for creating a USB Host application. This software component is available to users of MDK-Professional only.</p>
-<p>The USB Host Component simplifies software development of microcontroller systems that allow to connect USB Devices. The attributes of the USB Host Component are:</p>
+<div class="textblock"><p>本章介绍 USB 主机组件的软件结构，并说明它用于创建 USB 主机应用程序。该软件组件仅供 MDK 专业版的用户使用。</p>
+<p>USB 主机组件简化了允许连接 USB 设备的微控制器系统的软件开发。USB 主机组件的属性是：</p>
 <ul>
-<li>Complies with the USB 2.0 specification.</li>
-<li>Support for <a class="el" href="_h_i_d.html">HID</a>, <a class="el" href="_m_s_c.html">MSC</a>, <a class="el" href="_c_d_c.html">CDC</a>, and <a class="el" href="_custom_class.html">Custom</a> USB Device Classes to be connected to the USB Host.</li>
-<li>Support for <a class="el" href="_u_s_b__control__transfers.html">control</a>, <a class="el" href="_u_s_b__interrupt__transfers.html">interrupt</a> and <a class="el" href="_u_s_b__bulk__transfers.html">bulk</a> transfer types.</li>
+<li>符合 USB 2.0 规范。</li>
+<li>支持将 <a class="el" href="_h_i_d.html">HID</a>，<a class="el" href="_m_s_c.html">MSC</a>，<a class="el" href="_c_d_c.html">CDC</a> 和 <a class="el" href="_custom_class.html">自定义</a> USB 设备类连接到 USB 主机。</li>
+<li>支持 <a class="el" href="_u_s_b__control__transfers.html">控制</a>，<a class="el" href="_u_s_b__interrupt__transfers.html">中断</a> 和 <a class="el" href="_u_s_b__bulk__transfers.html">批量</a> 传输类型。</li>
 </ul>
-<h2>RTE Components </h2>
-<p>The following picture shows the relationships of the RTE Components with the microcontroller's USB Host peripheral (USB Controller). RTE Components provide configuration files and user code templates. <b>Configuration files</b> configure the RTE Components, hardware interfaces, memory resources and USB Host parameters. <b>User code templates</b> provide the skeleton for implementing support for different USB Device classes.</p>
+<h2>RTE 组件</h2>
+<p>下图显示了 RTE 组件与单片机的 USB 主机外设（USB 控制器）的关系。RTE 组件提供配置文件和用户代码模板。<b>配置文件</b> 配置 RTE 组件，硬件接口，内存资源和 USB 主机参数。<b>用户代码模板</b> 为实现对不同 USB 设备类的支持提供了框架。</p>
 <div class="image">
 <img src="usb_host_blocks_config_files.png" alt="usb_host_blocks_config_files.png"/>
 <div class="caption">
-USB Host Structure</div></div>
+USB 主机结构</div></div>
 <h1><a class="anchor" id="Create_a_USB_Host_Application"></a>
-Create an USB Host Application</h1>
-<p>The steps to create a microcontroller application that functions as an USB Host are:</p>
+创建一个 USB 主机应用程序</h1>
+<p>创建用作 USB 主机的微控制器应用程序的步骤如下：</p>
 <ol type="1">
-<li>Select <a class="el" href="_u_s_b__host.html#RTE_Software_Component_Selection_USBH">RTE Components</a> that are required for your application.</li>
-<li><a class="el" href="_u_s_b__host.html#USB_Driver_Configuration_USBH">Enable and configure the USB Host Driver</a>.</li>
-<li>Configure the <a class="el" href="_u_s_b__host.html#USB_Host_Configuration_USBH">USB Host</a> that connects the USB Middleware to the microcontroller USB peripheral.</li>
-<li>Configure the <a class="el" href="_u_s_b__host.html#usbh_system_resources">System Resources</a> according to the USB Host component's <a class="el" href="usb_resource_requirements.html#usbh_res_req">Resource Requirements</a>.</li>
-<li>Configure the parameters of the attached <a class="el" href="_u_s_b__host.html#USB_Device_Class_Configuration_USBH">USB Devices</a>.</li>
-<li>Implement the <a class="el" href="_u_s_b__host.html#USBH_User_Code_Implementation">Application Code</a> using code templates that are provided to support various USB Device Classes.</li>
-<li><a class="el" href="_u_s_b__host.html#usbh_debugging">Debug</a> you application using the built-in mechanisms of the USB Component.</li>
+<li>选择您的应用程序所需的 <a class="el" href="_u_s_b__host.html#RTE_Software_Component_Selection_USBH">RTE 组件</a>。</li>
+<li><a class="el" href="_u_s_b__host.html#USB_Driver_Configuration_USBH">启用并配置 USB 主机驱动程序</a>。</li>
+<li>配置将 USB 中间件连接到单片机 USB 外设的 <a class="el" href="_u_s_b__host.html#USB_Host_Configuration_USBH">USB 主机</a>。</li>
+<li>根据 USB 主机组件的 <a class="el" href="usb_resource_requirements.html#usbh_res_req">资源需求</a> 配置 <a class="el" href="_u_s_b__host.html#usbh_system_resources">系统资源</a>。</li>
+<li>配置连接的 <a class="el" href="_u_s_b__host.html#USB_Device_Class_Configuration_USBH">USB 设备</a> 的参数。</li>
+<li>使用提供的代码模板来实现 <a class="el" href="_u_s_b__host.html#USBH_User_Code_Implementation">应用程序代码</a>，以支持各种 USB 设备类。</li>
+<li>使用 USB 组件的内置机制 <a class="el" href="_u_s_b__host.html#usbh_debugging">调试</a> 您的应用程序。</li>
 </ol>
 <h2><a class="anchor" id="RTE_Software_Component_Selection_USBH"></a>
-RTE Component Selection</h2>
-<p>The RTE Component selection is done in a few steps:</p>
+RTE 组件选择</h2>
+<p>RTE 组件选择通过几个步骤完成：</p>
 <ol type="1">
-<li>From the USB Component:<ul>
-<li>Select <b>USB:CORE</b> that provides the basic functionality required for USB communication.</li>
-<li>Set <b>USB:Host</b> to '1'. This creates one USB Host for communication with attached USB Devices.</li>
-<li>Select the desired support for USB Classes (HID/MSC/CDC/Custom Class). For example, select <b>USB:Host:HID</b> to support HID Class Devices only.</li>
+<li>来自 USB 组件：<ul>
+<li>选择提供 USB 通信所需基本功能的 <b>USB:CORE</b>。</li>
+<li>将 <b>USB:Host</b> 设置为'1'。这将创建一个 USB 主机与连接的 USB 设备进行通信。</li>
+<li>选择 USB 类（HID / MSC / CDC / 自定义 类）所需的支持。例如，选择 <b>USB:Host:HID</b> 仅支持 HID 类设备。</li>
 </ul>
 </li>
-<li>From the Drivers Component:<ul>
-<li>Select an appropriate USB Host driver suitable for your application.</li>
+<li>从驱动程序组件：<ul>
+<li>选择适合您的应用的适当的 USB 主机驱动程序。</li>
 </ul>
 </li>
-<li>From the Device Component:<ul>
-<li>Additional device specific drivers may be required according to the validation output.</li>
+<li>从设备组件：<ul>
+<li>根据验证输出可能需要其他设备特定的驱动程序。</li>
 </ul>
 </li>
-<li>From the CMSIS Component:<ul>
-<li>Select the <b>CMSIS:CORE</b> to provide the core interface to the processor.</li>
-<li>Select a suitable <b>CMSIS:RTOS</b> that is a required for the USB Component.</li>
+<li>来自 CMSIS 组件：<ul>
+<li>选择 <b>CMSIS:CORE</b> 为处理器提供核心接口。</li>
+<li>选择适合 USB 组件所需的 <b>CMSIS:RTOS</b>。</li>
 </ul>
 </li>
 </ol>
 <div class="image">
 <img src="USBH_RTE.png" alt="USBH_RTE.png"/>
 <div class="caption">
-RTE Component Selection</div></div>
+RTE 组件选择</div></div>
 <h2><a class="anchor" id="USB_Driver_Configuration_USBH"></a>
-USB Driver and Controller</h2>
-<p>The USB Host Driver and the USB Controller of the microcontroller need to be correctly configured. In particular this means:</p>
+USB 驱动程序和控制器</h2>
+<p>微控制器的 USB 主机驱动程序和 USB 控制器需要正确配置。特别是这意味着：</p>
 <ul>
-<li>The USB Host Driver selected under the Drivers Component is typically configured with the <b>RTE_Device.h</b> configuration file. While this file provides multiple options, it is typically sufficient to enable the USB Host peripheral related to this driver. Some microcontrollers may require settings that related to a physical layer interface <b></b>(PHY), the USB <b>VBUS</b> power and <b>Overcurrent</b> protection.</li>
-<li>The USB Controller of the microcontroller needs typically specific clock settings. Consult the user's guide of the microcontroller to understand the requirements. Alternatively you may copy the setup of an USB Host example that is provided for various evaluation boards.</li>
+<li>在驱动程序组件下选择的 USB 主机驱动程序通常使用 <b>RTE_Device.h</b> 配置文件进行配置。虽然此文件提供了多个选项，但启用与此驱动程序相关的 USB 主机外设通常就足够了。某些微控制器可能需要与物理层接口（PHY），USB <b>VBUS</b> 电源和 <b>过流</b> 保护相关的设置。</li>
+<li>微控制器的 USB 控制器通常需要特定的时钟设置。请参阅微控制器的用户指南以了解要求。或者，您可以复制为各种评估板提供的 USB 主机示例的设置。</li>
 </ul>
 <h2><a class="anchor" id="USB_Host_Configuration_USBH"></a>
-USB Host Configuration</h2>
-<p>The <b>USBH_Config_<em>n</em>.c</b> file contains additional settings for the specific USB Host:</p>
+USB 主机配置</h2>
+<p><b>USBH_Config_<em>n</em>.c</b> 文件包含特定 USB 主机的其他设置：</p>
 <ul>
-<li>The <b>Driver</b> <b>Number</b> is set according to the selected USB Controller. For single USB Device Controllers it will be '0'.</li>
-<li>Some microcontrollers can make use of different hardware <b>Controller</b> <b>Interfaces</b>. Consult the user's guide of the selected microcontroller to choose the correct setting.</li>
+<li>根据所选择的 USB 控制器设置 <b>驱动器号</b>。对于单个 USB 设备控制器，它将是 “0”。</li>
+<li>一些微控制器可以使用不同的硬件 <b>控制器接口</b>。请查阅所选微控制器的用户指南以选择正确的设置。</li>
 </ul>
-<p>Refer to <a class="el" href="group__usbh__core_functions__conf.html">Configuration</a> for a detailed list of all available settings.</p>
+<p>有关所有可用设置的详细列表，请参阅 <a class="el" href="group__usbh__core_functions__conf.html">配置</a>。</p>
 <h2><a class="anchor" id="usbh_system_resources"></a>
-System Resource Configuration</h2>
-<p>For proper operation, the USB Host Component requires some system configuration settings. The requirements are:</p>
+系统资源配置</h2>
+<p>为了正确操作，USB 主机组件需要一些系统配置设置。要求是：</p>
 <ul>
-<li>Additional <b>stack</b> size of <b>512 bytes</b>. This can be configured in the device's <script>link_ext('startup_device');</script> file (<code>Stack_Size</code>).</li>
-<li>The USB Host component uses CMSIS-RTOS threads. Depending on the number of instances, you need to configure additional settings in the <script>link_ext('RTX-Conf-CM5');</script> file.</li>
+<li>额外的 <b>512 字节</b> 的 <b>堆栈</b> 大小。这可以在设备的 <script>link_ext('startup_device');</script> 文件（<code>Stack_Size</code>）中进行配置。</li>
+<li>USB 主机组件使用 CMSIS-RTOS 线程。根据实例的数量，您需要在 <script>link_ext('RTX-Conf-CM5');</script> 文件中配置其他设置。</li>
 </ul>
-<p>For more information, check the USB Host component's <a class="el" href="usb_resource_requirements.html#usbh_res_req">Resource Requirements</a> section.</p>
+<p>有关更多信息，请查看 USB 主机组件的 <a class="el" href="usb_resource_requirements.html#usbh_res_req">资源需求</a> 部分。</p>
 <h2><a class="anchor" id="USB_Device_Class_Configuration_USBH"></a>
-Configuration of Attachable USB Devices</h2>
-<p>In the <b>USBH_Config_HID.h</b>, <b>USBH_Config_MSC.h</b>, <b>USBH_Config_CDC.h</b>, or <b>USBH_Config_CustomClass.h</b> you can specify the number of concurrent USB Devices that the USB Host will support. This has an impact on the amount of memory that will be reserved in your application for the attachment of USB Devices. The <a class="el" href="_u_s_b__host__tutorial.html">USB Host Examples</a> shows how to configure an USB Host to interact with different HID, MSC or CDC peripheral devices.</p>
+可连接的 USB 设备的配置</h2>
+<p>在 <b>USBH_Config_HID.h</b>，<b>USBH_Config_MSC.h</b>，<b>USBH_Config_CDC.h</b> 或 <b>USBH_Config_CustomClass.h</b> 中，您可以指定 USB 主机将支持的并行 USB 设备的数量。这会影响应用程序中用于附加 USB 设备的内存量。<a class="el" href="_u_s_b__host__tutorial.html">USB 主机 示例</a> 显示如何配置 USB 主机以与不同的 HID，MSC 或 CDC 外围设备进行交互。</p>
 <h2><a class="anchor" id="USBH_User_Code_Implementation"></a>
-User Code Implementation</h2>
- <script>link_ext('uv4_ca_sourcefiles');</script> files provide function templates to support various USB Device Classes on the USB Host. The available functions are explained in the <a class="el" href="group__usbh___dev_class_functions.html">Reference</a> section of the USB Host Component. These routines can be adapted to the needs of the microcontroller application, in case different then default functionality is needed.</p>
-<p>The following templates are available for the USB Host component: </p>
+用户代码实现</h2>
+ <script>link_ext('uv4_ca_sourcefiles');</script> 文件提供功能模板以支持 USB 主机上的各种 USB 设备类。USB 主机组件的 <a class="el" href="group__usbh___dev_class_functions.html">参考</a> 部分对可用功能进行了说明。这些例程可以适应微控制器应用的需求，以防需要不同的默认功能。</p>
+<p>以下模板可用于 USB 主机组件：</p>
 <table class="doxtable">
 <tr>
-<th>Template Name </th><th>Purpose  </th></tr>
+<th>模板名称</th><th>用意</th></tr>
 <tr>
-<td>USBH_MSC.c </td><td>Required functions to support MSC devices. The template can be found <a class="el" href="group__usbh__msc_functions.html#USBH_MSC_UCT">here</a>. </td></tr>
+<td>USBH_MSC.c</td><td>支持 MSC 设备的必需功能。该模板可以在 <a class="el" href="group__usbh__msc_functions.html#USBH_MSC_UCT">这里</a> 找到。</td></tr>
 <tr>
-<td>USBH_PL2303.c </td><td>Required functions to support the <a href="http://www.prolific.com.tw/us/ShowProduct.aspx?pcid=41&amp;showlevel=0017-0037-0041" class="el" target="_blank">Prolific PL2303</a> USB to serial RS232 adapter. The template can be found <a class="el" href="group__usbh__custom_functions.html#USBH_PL2303_UCT">here</a>. </td></tr>
+<td>USBH_PL2303.c</td><td>所需功能支持 <a href="http://www.prolific.com.tw/us/ShowProduct.aspx?pcid=41&amp;showlevel=0017-0037-0041" class="el" target="_blank">Prolific PL2303</a> USB 至串行 RS232 适配器。该模板可以在 <a class="el" href="group__usbh__custom_functions.html#USBH_PL2303_UCT">这里</a> 找到。</td></tr>
 <tr>
-<td>USBH_User_CustomClass.c </td><td>Required functions to support any USB Device class. The template can be found <a class="el" href="group__usbh__custom_functions.html#USBH_Cust_UCT">here</a>. </td></tr>
+<td>USBH_User_CustomClass.c</td><td>所需的功能，以支持任何 USB 设备类。该模板可以在 <a class="el" href="group__usbh__custom_functions.html#USBH_Cust_UCT">这里</a> 找到。</td></tr>
 </table>
 <h2><a class="anchor" id="usbh_debugging"></a>
-Debugging</h2>
-<p>USB Host Component is distributed in library form and doesn't allow its direct code debug. However it can be easily configured to generate debug events and provide dynamic visibility to the component operation.</p>
-<p>Following variants can be selected for the <b>USB:CORE</b> software component in the <b>Manage Run-Time Environment</b> window:</p>
+调试</h2>
+<p>USB 主机组件以库的形式分发，不允许其直接代码调试。然而，它可以很容易地配置为生成调试事件并为组件操作提供动态可见性。</p>
+<p>可以在 <b>Manage Run-Time Environment</b> 窗口中为 <b>USB:CORE</b> 软件组件选择以下变体：</p>
 <ul>
-<li><b>Debug</b>: this variant supports event annotations for the <script>link_ext('Event-Recorder-About');</script> and makes it very easy to analyze the internal operation of the USB Host Component during application debug. <a class="el" href="_u_s_b__host.html#usbHostEvrSupport">Event Recorder Support</a> below explains how to configure and use this variant.</li>
-<li><b>Release</b>: this variant does not include additional debugging code. Use this variant when deploying the application.</li>
+<li><b>Debug</b>: 该变体支持 <script>link_ext('Event-Recorder-About');</script> 的事件注释，并且使得在应用程序调试过程中分析 USB 主机组件的内部操作变得非常简单。下面的 <a class="el" href="_u_s_b__host.html#usbHostEvrSupport">事件记录器支持</a> 介绍了如何配置和使用这个变体。</li>
+<li><b>Release</b>: 这个变体不包含额外的调试代码。部署应用程序时使用此变体。</li>
 </ul>
-<p>The figure below shows selection of the <b>Debug</b> variant. </p>
+<p>下图显示了 <b>Debug</b> 版本的选择。</p>
 <div class="image">
 <img src="usbh_debug_variant.png" alt="usbh_debug_variant.png"/>
 </div>
-<p>The <a class="el" href="group__usbh__evr.html">USB Host:Debug Events</a> describes the events implemented in the USB Device Component.</p>
+<p><a class="el" href="group__usbh__evr.html">USB Host:Debug Events</a> 描述 USB 设备组件中实现的事件。</p>
 <p><a class="anchor" id="usbHostEvrSupport"></a></p>
-<h2>Event Recorder Support </h2>
- <script>link_ext('Event-Recorder-About');</script> is a powerful tool that provides visibility to the dynamic execution of the program.</p>
-<p>The USB Host Component generates <a class="el" href="group__usbh__evr.html">a broad set of Debug Events</a> for the Event Recorder and implements required infrastructure to interface with it.</p>
-<p>To use the Event Recorder it is required to create an image with event generation support. The necessary steps are:</p>
+<h2>事件记录器支持</h2>
+ <script>link_ext('Event-Recorder-About');</script> 是一个强大的工具，可以提供程序动态执行的可视性。</p>
+<p>USB 主机组件为事件记录器生成 <a class="el" href="group__usbh__evr.html">一系列广泛的调试事件</a>，并实现所需的基础设施以与其进行交互。</p>
+<p>要使用事件记录器，需要创建具有事件生成支持的图像。必要的步骤是：</p>
 <ol type="1">
-<li> <script>link_ext('Debug-Variant-Select');</script>: in the RTE management dialog select the <b>Debug</b> variant for the <b>USB:CORE</b> software component.</li>
-<li> <script>link_ext('Event-Recorder-Enable');</script>: in the RTE management dialog enable the software component <b>Compiler:Event Recorder</b>.</li>
-<li> <script>link_ext('Event-Recorder-Initialize');</script>: in the application code, call the function <b>EventRecorderInitialize</b>.</li>
-<li> <script>link_ext('Event-Recorder-Configure');</script>: if necessary, adjust default Event Recorder configuration.</li>
-<li>Build the application code, download it to the target hardware and start debug session.</li>
+<li> <script>link_ext('Debug-Variant-Select');</script>: 在 RTE 管理对话框中选择 <b>USB:CORE</b> 软件组件的 <b>Debug</b> 版本。</li>
+<li> <script>link_ext('Event-Recorder-Enable');</script>: 在 RTE 管理对话框中启用软件组件 <b>Compiler:Event Recorder</b>。</li>
+<li> <script>link_ext('Event-Recorder-Initialize');</script>: 在应用程序代码中，调用函数 <b>EventRecorderInitialize</b>。</li>
+<li> <script>link_ext('Event-Recorder-Configure');</script>: 如有必要，调整默认的事件记录器配置。</li>
+<li>构建应用程序代码，将其下载到目标硬件并启动调试会话。</li>
 </ol>
-<p>Now, when the USB Host generates event information, it can be viewed in the <script>link_ext('uv4-Event-Recorder');</script>. </p>
+<p>现在，当 USB 主机生成事件信息时，可以在 <script>link_ext('uv4-Event-Recorder');</script> 中查看它。</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 21 2018 20:27:14 for USB Component by ARM Ltd. All rights reserved.
+    <li class="footer">生成于 2018 年 2 月 21 日 星期三 适用于 ARM 有限公司的 USB 组件的所有权利。
 	<!--
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
